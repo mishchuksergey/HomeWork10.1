@@ -9,9 +9,9 @@ def filter_by_state(dictionary: dict,  state: str) -> dict:
 
 
 
-def sort_by_date(dictionary: dict) -> dict:
+def sort_by_date(dictionary: dict, ascending=False) -> dict:
     """Функция, которая возвращает новый список, отсортированный по дате"""
     if ascending == False:
-        return sorted(dictionary, key=lambda ascending: ascending['date'], reverse=True)
-    else:
         return sorted(dictionary, key=lambda ascending: ascending['date'])
+    else:
+        return sorted(dictionary, key=lambda ascending: ascending['date'], reverse=True)
